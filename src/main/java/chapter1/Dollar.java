@@ -1,10 +1,9 @@
 package chapter1;
 
-public class Dollar {
-    private int amount;
+public class Dollar extends Money {
 
     public Dollar(int amount) {
-        this.amount = amount;
+        super.amount = amount;
     }
 
     public Dollar times(int multiplier) {
@@ -14,11 +13,7 @@ public class Dollar {
 
     @Override
     public boolean equals(Object obj) {
-        Dollar dollar = (Dollar) obj;
-        return amount == dollar.getAmount();
-    }
-
-    public int getAmount() {
-        return amount;
+        Money money = (Money) obj;
+        return amount == money.amount;
     }
 }
