@@ -1,6 +1,6 @@
 package chapter1;
 
-public class Money {
+public abstract class Money {
     protected int amount;
 
     @Override
@@ -9,4 +9,10 @@ public class Money {
         return amount == money.amount
                 && getClass().equals(money.getClass());
     }
+
+    public static Money dollar(int amount) {
+        return new Dollar(amount);
+    }
+
+    abstract Money times(int multiplier);
 }
