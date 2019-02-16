@@ -1,7 +1,7 @@
 package chapter1;
 
 public class Dollar {
-    public int amount;
+    private int amount;
 
     public Dollar(int amount) {
         this.amount = amount;
@@ -9,12 +9,16 @@ public class Dollar {
 
     public Dollar times(int multiplier) {
         amount *= multiplier;
-        return new Dollar(amount * multiplier);
+        return new Dollar(amount);
     }
 
     @Override
     public boolean equals(Object obj) {
         Dollar dollar = (Dollar) obj;
-        return amount == dollar.amount;
+        return amount == dollar.getAmount();
+    }
+
+    public int getAmount() {
+        return amount;
     }
 }
