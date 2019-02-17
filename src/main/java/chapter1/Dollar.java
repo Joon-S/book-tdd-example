@@ -2,13 +2,8 @@ package chapter1;
 
 public class Dollar extends Money {
 
-    public Dollar(int amount) {
-        super.amount = amount;
-    }
-
-    public Dollar times(int multiplier) {
-        amount *= multiplier;
-        return new Dollar(amount);
+    public Dollar(int amount, String currency) {
+        super(amount, currency);
     }
 
     @Override
