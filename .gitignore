@@ -1,0 +1,6 @@
+# Environment
+.gradle
+.idea
+
+# print
+out
